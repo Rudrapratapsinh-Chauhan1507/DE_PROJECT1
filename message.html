@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging | CareerMent</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MentorConnect</div>
+        <ul class="nav-links">
+            <li href="home.html" id="home-link">Home</li>
+            <li href="network.html" id="my-network">My Network</li>
+            <li href="mentor.html" id="find-mentor">Find Mentor</li>
+            <li href="message.html" id="messaging-link">Messaging</li>
+            <li href="notification.html" id="notification-link">Notifications</li>
+            <li href="meeting.html" id="meeting-link">Join Meeting</li>
+        </ul>
+    </nav>
+
+    <!-- Messaging Section -->
+    <div class="messaging-container">
+        <!-- Left Sidebar (Chat List) -->
+        <div class="chat-list">
+            <h2>Messaging</h2>
+            <input type="text" placeholder="Search messages..." class="search-bar">
+            <div class="chat-tabs">
+                <span class="active">Focused</span>
+                <span>Other</span>
+            </div>
+
+            <div class="chat-item" onclick="openChat('Rajveersinh Chavda')">
+                <img src="Ankitama'am1.jpg" alt="User">
+                <div>
+                    <h4>Prof. Ankita Mewada</h4>
+                    <p>Hello Ma'am, Can you schedule meeting on how to crack GATE exam?</p>
+                </div>
+            </div>
+
+            <div class="chat-item" onclick="openChat('Karthik Applla')">
+                <img src="Heenama'am.jpg" alt="User">
+                <div>
+                    <h4>Prof. Heena Patel</h4>
+                    <p>Thank you Ma'am for the webinar on React.js.</p>
+                </div>
+            </div>
+
+            <!-- <div class="chat-item" onclick="openChat('Pratik Prajapati')">
+                <img src="user3.jpg" alt="User">
+                <div>
+                    <h4></h4>
+                    <p>Hi Pratik, Thanks for joining.</p>
+                </div>
+            </div> -->
+
+            <div class="chat-item" onclick="openChat('Divya Patel')">
+                <img src="female.jpeg" alt="User">
+                <div>
+                    <h4>Rajveersinh Chavda</h4>
+                    <p>Thank  you sir, for mentoring us in SIH Hacakthon'2025.</p>
+                </div>
+            </div>
+
+            <!-- <div class="chat-item" onclick="openChat('Nidhi Modi')">
+                <img src="user5.jpg" alt="User">
+                <div>
+                    <h4>Nidhi Modi</h4>
+                    <p>Hey Nidhi, Thanks for helping in project.</p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <h3 id="chatUser">Select a chat</h3>
+            </div>
+
+            <div class="chat-box" id="chatBox">
+                <p class="placeholder">Click on a conversation to start chatting.</p>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="message.js"></script> -->
+    <script src="home.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentor Dashboard | MentorConnect</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h2>Mentor Dashboard</h2>
+    <form id="mentorForm">
+      <input type="text" placeholder="Full Name" id="mentorName" required>
+      <input type="text" placeholder="Branch/Field" id="mentorBranch" required>
+      <input type="text" placeholder="Course/Specialization" id="mentorCourse" required>
+      <input type="text" placeholder="Skills (comma-separated)" id="mentorSkills">
+      <input type="text" placeholder="Certificates" id="mentorCertificates">
+      <textarea placeholder="Reviews" id="mentorReviews"></textarea>
+      <input type="text" placeholder="Schedule Availability" id="mentorSchedule">
+      <input type="text" placeholder="Connected Students" id="mentorConnections">
+      <button type="submit">Save</button>
+    </form>
+    <button onclick="goToHome()">Go to Home</button>
+    <div id="mentorSummary"></div>
+  </div>
+
+  <script>
+    document.getElementById("mentorForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("mentorName").value;
+      const branch = document.getElementById("mentorBranch").value;
+      const course = document.getElementById("mentorCourse").value;
+      const skills = document.getElementById("mentorSkills").value;
+      const certificates = document.getElementById("mentorCertificates").value;
+      const reviews = document.getElementById("mentorReviews").value;
+      const schedule = document.getElementById("mentorSchedule").value;
+      const connections = document.getElementById("mentorConnections").value;
+
+      document.getElementById("mentorSummary").innerHTML = `
+        <h3>Your Profile</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Field:</strong> ${branch}</p>
+        <p><strong>Specialization:</strong> ${course}</p>
+        <p><strong>Skills:</strong> ${skills}</p>
+        <p><strong>Certificates:</strong> ${certificates}</p>
+        <p><strong>Reviews:</strong> ${reviews}</p>
+        <p><strong>Schedule:</strong> ${schedule}</p>
+        <p><strong>Connected Students:</strong> ${connections}</p>
+      `;
+    });
+
+    function goToHome() {
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>

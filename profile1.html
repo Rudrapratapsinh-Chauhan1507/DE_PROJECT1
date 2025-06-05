@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profile</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MentorConnect</div>
+        <ul class="nav-links">
+            <li href="home.html" id="home-link">Home</li>
+            <li href="network.html">My Network</li>
+            <li href="mentor.html" id="find-mentor">Find Mentor</li>
+            <li href="message.html" id="messaging-link">Messaging</li>
+            <li href="notification.html" id="notification-link">Notifications</li>
+            <li href="meeting.html" id="meeting-link">Join Meeting</li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="profile-container">
+            <img id="profileImage" src="Javedsir.jpg" alt="Mentor Image">
+            <h2 id="mentorName">Prof. Javed Khan</h2>
+            <p id="mentorTitle">Expert in Automations and Solar Systems</p>
+            <p id="mentorLocation">Ahmedabad</p>
+            <p id="mentorConnections"></p>
+
+            <button id="followBtn">Follow</button>
+            <button id="messageBtn">Message</button>
+            <button id="bookAppointmentBtn">Book Appointment</button>
+            <button id="moreBtn">More</button>
+
+            <section class="bio-section">
+                <h3>About</h3>
+                <p id="mentorBio"></p>
+            </section>
+        </div>
+    </main>
+    <!-- <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Schedule an Appointment</h2>
+            Calendly Embed
+            <iframe id="calendlyFrame" src="https://calendly.com/careerment/30min?embed_domain=127.0.0.1" 
+                    width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+    </div> -->
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Mentor Connect</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to Mentor Connect</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+      <label for="role">I am a:</label>
+      <select id="role" name="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="student">Student</option>
+        <option value="mentor">Mentor</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent actual form submission
+
+      const role = document.getElementById("role").value;
+
+      if (role === "student") {
+        window.location.href = "student-dashboard.html";
+      } else if (role === "mentor") {
+        window.location.href = "mentor-dashboard.html";
+      } else {
+        alert("Please select your role before logging in.");
+      }
+    });
+  </script>
+</body>
+</html>

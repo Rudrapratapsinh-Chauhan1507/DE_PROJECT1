@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profile</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MentorConnect</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="network.html">My Network</a></li>
+            <li><a href="mentor.html">Find Mentor</a></li>
+            <li><a href="message.html">Messaging</a></li>
+            <li><a href="notification.html">Notifications</a></li>
+            <li><a href="meeting.html">Join Meeting</a></li>
+        </ul>
+    </nav>
+
+   <main>
+    <div class="profile-container">
+      <img id="profileImage" src="" alt="Mentor Image" class="profile-image"/>
+      <h2 id="mentorName"></h2>
+      <p id="mentorTitle"></p>
+      <p id="mentorLocation"></p>
+      <p id="mentorConnections"></p>
+
+      <button id="followBtn">Follow</button>
+      <button id="messageBtn">Message</button>
+      <button id="bookAppointmentBtn">Book Appointment</button>
+      <button id="moreBtn">More</button>
+
+      <section class="bio-section">
+        <h3>About</h3>
+        <p id="mentorBio"></p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    document.getElementById("mentorName").innerText = getQueryParam("name");
+    document.getElementById("mentorTitle").innerText = getQueryParam("title");
+    document.getElementById("mentorLocation").innerText = getQueryParam("location");
+    document.getElementById("mentorConnections").innerText = getQueryParam("connections");
+    document.getElementById("mentorBio").innerText = getQueryParam("bio");
+    document.getElementById("profileImage").src = getQueryParam("image");
+  </script>
+    
+
+</body>
+</html>

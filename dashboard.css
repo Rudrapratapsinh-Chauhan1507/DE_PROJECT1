@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    padding: 30px;
+    margin: 0;
+  }
+  
+  .dashboard-container {
+    max-width: 700px;
+    background: white;
+    padding: 25px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #005f99;
+  }
+  
+  #studentSummary, #mentorSummary {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+  }
+  
